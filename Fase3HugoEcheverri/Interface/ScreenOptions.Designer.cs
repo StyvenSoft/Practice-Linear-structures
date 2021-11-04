@@ -39,9 +39,15 @@
             this.btnQueue = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.problema1StackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.problema2QueueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.problema3ListsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -119,6 +125,7 @@
             this.btnStack.TabIndex = 7;
             this.btnStack.Text = "Ingresar  Problema 1 (Stack)";
             this.btnStack.UseVisualStyleBackColor = true;
+            this.btnStack.Click += new System.EventHandler(this.btnStack_Click);
             // 
             // btnQueue
             // 
@@ -147,10 +154,49 @@
             this.btnClose.Text = "Salir";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.formulariosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // formulariosToolStripMenuItem
+            // 
+            this.formulariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.problema1StackToolStripMenuItem,
+            this.problema2QueueToolStripMenuItem,
+            this.problema3ListsToolStripMenuItem});
+            this.formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
+            this.formulariosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.formulariosToolStripMenuItem.Text = "Formularios";
+            // 
+            // problema1StackToolStripMenuItem
+            // 
+            this.problema1StackToolStripMenuItem.Name = "problema1StackToolStripMenuItem";
+            this.problema1StackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.problema1StackToolStripMenuItem.Text = "Problema 1 (Stack)";
+            // 
+            // problema2QueueToolStripMenuItem
+            // 
+            this.problema2QueueToolStripMenuItem.Name = "problema2QueueToolStripMenuItem";
+            this.problema2QueueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.problema2QueueToolStripMenuItem.Text = "Problema 2 (Queue)";
+            // 
+            // problema3ListsToolStripMenuItem
+            // 
+            this.problema3ListsToolStripMenuItem.Name = "problema3ListsToolStripMenuItem";
+            this.problema3ListsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.problema3ListsToolStripMenuItem.Text = "Problema 3 (Lists)";
+            // 
             // ScreenOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(634, 361);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnList);
@@ -163,12 +209,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ScreenOptions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opciones Principales";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +237,10 @@
         private System.Windows.Forms.Button btnQueue;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem formulariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem problema1StackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem problema2QueueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem problema3ListsToolStripMenuItem;
     }
 }

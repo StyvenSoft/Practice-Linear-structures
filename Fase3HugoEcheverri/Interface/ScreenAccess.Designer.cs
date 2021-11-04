@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,15 +52,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información Aplicación";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Curso: Fase 3  Práctica Estructuras lineales";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(86, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(201, 15);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Stack<T>, Queue<T> y List<T>";
             // 
             // label2
             // 
@@ -71,6 +71,16 @@
             this.label2.Size = new System.Drawing.Size(236, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Estudiante: Hugo Steveen Echeverri";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(40, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(286, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Curso: Fase 3  Práctica Estructuras lineales";
             // 
             // label3
             // 
@@ -119,20 +129,11 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Universidad Nacional Abierta y a Distancia UNAD";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(86, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 15);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Stack<T>, Queue<T> y List<T>";
-            // 
             // ScreenAccess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(634, 361);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnClose);

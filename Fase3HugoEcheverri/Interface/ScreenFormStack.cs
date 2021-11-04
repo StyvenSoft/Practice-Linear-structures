@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Fase3HugoEcheverri.Interface
 {
-    public partial class ScreenOptions : Form
+    public partial class ScreenFormStack : Form
     {
-        public ScreenOptions()
+        public ScreenFormStack()
         {
             InitializeComponent();
-        }
-
-        private void btnStack_Click(object sender, EventArgs e)
-        {
-            Interface.ScreenFormStack formStack = new ScreenFormStack();
-            formStack.Show();
-            this.Hide();
         }
     }
 }

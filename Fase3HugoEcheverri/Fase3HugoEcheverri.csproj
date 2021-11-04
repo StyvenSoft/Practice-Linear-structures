@@ -52,6 +52,12 @@
     <Compile Include="Interface\ScreenAccess.Designer.cs">
       <DependentUpon>ScreenAccess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ScreenFormStack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ScreenFormStack.Designer.cs">
+      <DependentUpon>ScreenFormStack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ScreenOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interface\ScreenAccess.resx">
       <DependentUpon>ScreenAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ScreenFormStack.resx">
+      <DependentUpon>ScreenFormStack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ScreenOptions.resx">
       <DependentUpon>ScreenOptions.cs</DependentUpon>
