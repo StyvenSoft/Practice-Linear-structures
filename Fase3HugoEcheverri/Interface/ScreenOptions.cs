@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Fase3HugoEcheverri
+namespace Fase3HugoEcheverri.Interface
 {
-    public partial class Form1 : Form
+    public partial class ScreenOptions : Form
     {
-        public Form1()
+        public ScreenOptions()
         {
             InitializeComponent();
         }

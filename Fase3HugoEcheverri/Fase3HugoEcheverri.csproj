@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Interface\ScreenAccess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Interface\ScreenAccess.Designer.cs">
+      <DependentUpon>ScreenAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ScreenOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ScreenOptions.Designer.cs">
+      <DependentUpon>ScreenOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interface\ScreenAccess.resx">
+      <DependentUpon>ScreenAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ScreenOptions.resx">
+      <DependentUpon>ScreenOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,7 +86,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Interface\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="World\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
