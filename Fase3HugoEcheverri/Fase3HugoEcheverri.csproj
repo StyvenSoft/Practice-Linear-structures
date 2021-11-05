@@ -52,6 +52,12 @@
     <Compile Include="Interface\ScreenAccess.Designer.cs">
       <DependentUpon>ScreenAccess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ScreenFormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\ScreenFormList.Designer.cs">
+      <DependentUpon>ScreenFormList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ScreenFormStack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,16 +70,28 @@
     <Compile Include="Interface\ScreenOptions.Designer.cs">
       <DependentUpon>ScreenOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\SreenFormQueue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\SreenFormQueue.Designer.cs">
+      <DependentUpon>SreenFormQueue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interface\ScreenAccess.resx">
       <DependentUpon>ScreenAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\ScreenFormList.resx">
+      <DependentUpon>ScreenFormList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ScreenFormStack.resx">
       <DependentUpon>ScreenFormStack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\ScreenOptions.resx">
       <DependentUpon>ScreenOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\SreenFormQueue.resx">
+      <DependentUpon>SreenFormQueue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
