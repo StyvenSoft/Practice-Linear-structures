@@ -49,12 +49,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtConsump = new System.Windows.Forms.TextBox();
+            this.txtConsumMonth = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotalPay = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStack = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStack)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -219,19 +219,12 @@
             // 
             this.cmbSocialStratum.FormattingEnabled = true;
             this.cmbSocialStratum.Items.AddRange(new object[] {
-            "Seleccionar",
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
             this.cmbSocialStratum.Location = new System.Drawing.Point(481, 38);
             this.cmbSocialStratum.Name = "cmbSocialStratum";
             this.cmbSocialStratum.Size = new System.Drawing.Size(175, 21);
@@ -250,19 +243,9 @@
             // 
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Items.AddRange(new object[] {
-            "Seleccionar",
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"});
+            "Residencial",
+            "Comercial",
+            "Urbano"});
             this.cmbCategory.Location = new System.Drawing.Point(481, 73);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(175, 21);
@@ -277,12 +260,12 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Categoria";
             // 
-            // txtConsump
+            // txtConsumMonth
             // 
-            this.txtConsump.Location = new System.Drawing.Point(481, 109);
-            this.txtConsump.Name = "txtConsump";
-            this.txtConsump.Size = new System.Drawing.Size(175, 20);
-            this.txtConsump.TabIndex = 16;
+            this.txtConsumMonth.Location = new System.Drawing.Point(481, 109);
+            this.txtConsumMonth.Name = "txtConsumMonth";
+            this.txtConsumMonth.Size = new System.Drawing.Size(175, 20);
+            this.txtConsumMonth.TabIndex = 16;
             // 
             // label8
             // 
@@ -318,13 +301,13 @@
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvStack
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(639, 123);
-            this.dataGridView1.TabIndex = 20;
+            this.dgvStack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStack.Location = new System.Drawing.Point(17, 229);
+            this.dgvStack.Name = "dgvStack";
+            this.dgvStack.Size = new System.Drawing.Size(639, 123);
+            this.dgvStack.TabIndex = 20;
             // 
             // dateTimePicker1
             // 
@@ -366,6 +349,7 @@
             this.btnAdd.TabIndex = 25;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -417,11 +401,11 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvStack);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtTotalPay);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtConsump);
+            this.Controls.Add(this.txtConsumMonth);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.label7);
@@ -443,7 +427,7 @@
             this.Text = "Formulario Pila (Stack)";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -472,12 +456,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtConsump;
+        private System.Windows.Forms.TextBox txtConsumMonth;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTotalPay;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStack;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
