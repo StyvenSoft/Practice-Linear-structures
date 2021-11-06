@@ -55,13 +55,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.dgvStack = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpPayment = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.totalRaised = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnNextProcess = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -278,6 +278,7 @@
             // 
             // txtTotalPay
             // 
+            this.txtTotalPay.Enabled = false;
             this.txtTotalPay.Location = new System.Drawing.Point(481, 148);
             this.txtTotalPay.Name = "txtTotalPay";
             this.txtTotalPay.Size = new System.Drawing.Size(175, 20);
@@ -300,6 +301,7 @@
             this.btnCalculate.TabIndex = 19;
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // dgvStack
             // 
@@ -309,21 +311,21 @@
             this.dgvStack.Size = new System.Drawing.Size(639, 123);
             this.dgvStack.TabIndex = 20;
             // 
-            // dateTimePicker1
+            // dtpPayment
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(95, 369);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 21;
+            this.dtpPayment.Location = new System.Drawing.Point(95, 369);
+            this.dtpPayment.Name = "dtpPayment";
+            this.dtpPayment.Size = new System.Drawing.Size(200, 20);
+            this.dtpPayment.TabIndex = 21;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(18, 372);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.Size = new System.Drawing.Size(65, 13);
             this.label10.TabIndex = 22;
-            this.label10.Text = "Fecha actual";
+            this.label10.Text = "Fecha Pago";
             // 
             // label11
             // 
@@ -334,12 +336,13 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "Total Recaudado";
             // 
-            // textBox7
+            // totalRaised
             // 
-            this.textBox7.Location = new System.Drawing.Point(531, 369);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(125, 20);
-            this.textBox7.TabIndex = 24;
+            this.totalRaised.Location = new System.Drawing.Point(531, 369);
+            this.totalRaised.Name = "totalRaised";
+            this.totalRaised.ReadOnly = true;
+            this.totalRaised.Size = new System.Drawing.Size(125, 20);
+            this.totalRaised.TabIndex = 24;
             // 
             // btnAdd
             // 
@@ -347,7 +350,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 25;
-            this.btnAdd.Text = "Agregar";
+            this.btnAdd.Text = "Registrar";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -359,15 +362,17 @@
             this.btnDelete.TabIndex = 26;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnNextProcess
+            // btnReport
             // 
-            this.btnNextProcess.Location = new System.Drawing.Point(229, 408);
-            this.btnNextProcess.Name = "btnNextProcess";
-            this.btnNextProcess.Size = new System.Drawing.Size(110, 23);
-            this.btnNextProcess.TabIndex = 27;
-            this.btnNextProcess.Text = "Próximo a Procesar";
-            this.btnNextProcess.UseVisualStyleBackColor = true;
+            this.btnReport.Location = new System.Drawing.Point(229, 408);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(110, 23);
+            this.btnReport.TabIndex = 27;
+            this.btnReport.Text = "Reporte";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnBack
             // 
@@ -394,13 +399,13 @@
             this.ClientSize = new System.Drawing.Size(678, 443);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnNextProcess);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.totalRaised);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpPayment);
             this.Controls.Add(this.dgvStack);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtTotalPay);
@@ -462,13 +467,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.DataGridView dgvStack;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpPayment;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox totalRaised;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnNextProcess;
+        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnExit;
     }

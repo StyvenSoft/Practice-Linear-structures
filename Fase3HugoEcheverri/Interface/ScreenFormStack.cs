@@ -19,6 +19,34 @@ namespace Fase3HugoEcheverri.Interface
             InitializeComponent();
         }
 
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            if (txtConsumMonth.Text != "")
+            {
+                // int cubicMeterValue = ;
+                double comsumMonth = Convert.ToDouble(txtConsumMonth.Text);
+
+                txtTotalPay.Text = Convert.ToString(comsumMonth * 1500);
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar un Consumo mes (mts3)"); 
+            } 
+        }
+
+        private void cleanControls()
+        {
+            txtInvoice.Clear();
+            txtEnrollment.Clear();
+            txtMonthBilled.ResetText();
+            txtUsername.Clear();
+            txtAddress.Clear();
+            cmbSocialStratum.ResetText();
+            txtConsumMonth.Clear();
+            cmbCategory.ResetText();
+            txtTotalPay.Clear();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string numInvoice = txtInvoice.Text;
@@ -29,6 +57,8 @@ namespace Fase3HugoEcheverri.Interface
             int stratum = Int32.Parse(cmbSocialStratum.Text);
             double consumMonth = Double.Parse(txtConsumMonth.Text);
             string category = cmbCategory.Text;
+            double totalConsum = Double.Parse(txtTotalPay.Text);
+            string datePayment = dtpPayment.Text;
 
             World.Stack.Invoice theInvoice = new World.Stack.Invoice(
                 numInvoice,
@@ -38,11 +68,51 @@ namespace Fase3HugoEcheverri.Interface
                 address,
                 stratum,
                 category,
-                consumMonth
+                consumMonth,
+                totalConsum,
+                datePayment
                 );
             pileAcueduct.Push(theInvoice);
             dgvStack.DataSource = null;
             dgvStack.DataSource = pileAcueduct.ToArray();
+            cleanControls();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (pileAcueduct.Count != 0)
+            {
+                if (MessageBox.Show("Desea eliminar el ultimo registro ingresado?", "Atención",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    pileAcueduct.Pop();
+                    dgvStack.DataSource = pileAcueduct.ToArray();
+                    MessageBox.Show("Se elimino el registro!", "Atención");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay registros en la Pila!", "Atención");
+            }
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            
+            if (pileAcueduct.Count > 0)
+            {
+                double sum = 0;
+                foreach(DataGridViewRow row in dgvStack.Rows)
+                {
+                    if (row.Cells[8].Value != null)
+                        sum += Convert.ToDouble(row.Cells[8].Value);
+                }
+                totalRaised.Text = Convert.ToString(sum);
+                MessageBox.Show("Total Recaudo: " + sum.ToString(), "Servicio de acueducto");
+            } else
+            {
+                MessageBox.Show("Debe ingresar un registro", "Atención");
+            }
         }
     }
 }

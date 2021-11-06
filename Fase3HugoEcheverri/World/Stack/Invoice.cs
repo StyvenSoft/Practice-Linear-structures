@@ -17,11 +17,13 @@ namespace Fase3HugoEcheverri.World.Stack
         private int stratum;
         private String category;
         private double consumMonth;
+        private double totalConsum;
+        private string datePayment;
 
         // Metodo constructor
         public Invoice(String numInvoice, String numEnrollment, String monthBilled,
                 String userName, String address, int stratum, String category,
-                double consumMonth)
+                double consumMonth, double totalConsum, string datePayment)
         {
             this.numInvoice = numInvoice;
             this.numEnrollment = numEnrollment;
@@ -31,6 +33,8 @@ namespace Fase3HugoEcheverri.World.Stack
             this.stratum = stratum;
             this.category = category;
             this.consumMonth = consumMonth;
+            this.totalConsum = totalConsum;
+            this.datePayment = datePayment;
         }
 
         public string NumInvoice
@@ -134,6 +138,32 @@ namespace Fase3HugoEcheverri.World.Stack
             set
             {
                 consumMonth = value;
+            }
+        }
+
+        public double TotalConsum
+        {
+            get
+            {
+                return totalConsum;
+            }
+
+            set
+            {
+                totalConsum = value;
+            }
+        }
+
+        public string DatePayment
+        {
+            get
+            {
+                return datePayment;
+            }
+
+            set
+            {
+                datePayment = value;
             }
         }
 
