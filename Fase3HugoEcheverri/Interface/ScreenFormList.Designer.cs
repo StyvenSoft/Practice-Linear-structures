@@ -36,20 +36,20 @@
             this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtIdStudent = new System.Windows.Forms.TextBox();
+            this.txtNameStudent = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbStratum = new System.Windows.Forms.ComboBox();
+            this.cmbProgramAcademic = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbNameUniversity = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateRegister = new System.Windows.Forms.DateTimePicker();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -122,19 +122,19 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
-            // textBox1
+            // txtIdStudent
             // 
-            this.textBox1.Location = new System.Drawing.Point(152, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtIdStudent.Location = new System.Drawing.Point(148, 47);
+            this.txtIdStudent.Name = "txtIdStudent";
+            this.txtIdStudent.Size = new System.Drawing.Size(169, 20);
+            this.txtIdStudent.TabIndex = 2;
             // 
-            // textBox2
+            // txtNameStudent
             // 
-            this.textBox2.Location = new System.Drawing.Point(152, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNameStudent.Location = new System.Drawing.Point(152, 83);
+            this.txtNameStudent.Name = "txtNameStudent";
+            this.txtNameStudent.Size = new System.Drawing.Size(169, 20);
+            this.txtNameStudent.TabIndex = 4;
             // 
             // label2
             // 
@@ -145,12 +145,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre Completo";
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.Location = new System.Drawing.Point(152, 118);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtAge.Location = new System.Drawing.Point(152, 118);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(169, 20);
+            this.txtAge.TabIndex = 6;
             // 
             // label3
             // 
@@ -170,21 +170,21 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Estrato Social";
             // 
-            // comboBox1
+            // cmbStratum
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(480, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(169, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cmbStratum.FormattingEnabled = true;
+            this.cmbStratum.Location = new System.Drawing.Point(480, 47);
+            this.cmbStratum.Name = "cmbStratum";
+            this.cmbStratum.Size = new System.Drawing.Size(169, 21);
+            this.cmbStratum.TabIndex = 9;
             // 
-            // comboBox2
+            // cmbProgramAcademic
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(480, 83);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(169, 21);
-            this.comboBox2.TabIndex = 11;
+            this.cmbProgramAcademic.FormattingEnabled = true;
+            this.cmbProgramAcademic.Location = new System.Drawing.Point(480, 83);
+            this.cmbProgramAcademic.Name = "cmbProgramAcademic";
+            this.cmbProgramAcademic.Size = new System.Drawing.Size(169, 21);
+            this.cmbProgramAcademic.TabIndex = 11;
             // 
             // label5
             // 
@@ -195,13 +195,13 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Programa Académico";
             // 
-            // comboBox3
+            // cmbNameUniversity
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(480, 121);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(169, 21);
-            this.comboBox3.TabIndex = 13;
+            this.cmbNameUniversity.FormattingEnabled = true;
+            this.cmbNameUniversity.Location = new System.Drawing.Point(480, 121);
+            this.cmbNameUniversity.Name = "cmbNameUniversity";
+            this.cmbNameUniversity.Size = new System.Drawing.Size(169, 21);
+            this.cmbNameUniversity.TabIndex = 13;
             // 
             // label6
             // 
@@ -229,12 +229,12 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Fecha Actual";
             // 
-            // dateTimePicker1
+            // dtpDateRegister
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(117, 371);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtpDateRegister.Location = new System.Drawing.Point(117, 371);
+            this.dtpDateRegister.Name = "dtpDateRegister";
+            this.dtpDateRegister.Size = new System.Drawing.Size(200, 20);
+            this.dtpDateRegister.TabIndex = 16;
             // 
             // textBox4
             // 
@@ -309,20 +309,20 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDateRegister);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cmbNameUniversity);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbProgramAcademic);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbStratum);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNameStudent);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIdStudent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -346,20 +346,20 @@
         private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regresarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtIdStudent;
+        private System.Windows.Forms.TextBox txtNameStudent;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbStratum;
+        private System.Windows.Forms.ComboBox cmbProgramAcademic;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbNameUniversity;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDateRegister;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
