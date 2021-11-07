@@ -36,29 +36,27 @@
             this.próximoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNumFlight = new System.Windows.Forms.TextBox();
+            this.txtIdClient = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNameClient = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbAirline = new System.Windows.Forms.ComboBox();
+            this.cmbDestinyCities = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.dtpDateTravel = new System.Windows.Forms.DateTimePicker();
+            this.dvgQueue = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTotalRegister = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnNextProcess = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgQueue)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,19 +120,19 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
-            // textBox1
+            // txtNumFlight
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtNumFlight.Location = new System.Drawing.Point(143, 41);
+            this.txtNumFlight.Name = "txtNumFlight";
+            this.txtNumFlight.Size = new System.Drawing.Size(171, 20);
+            this.txtNumFlight.TabIndex = 2;
             // 
-            // textBox2
+            // txtIdClient
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtIdClient.Location = new System.Drawing.Point(143, 79);
+            this.txtIdClient.Name = "txtIdClient";
+            this.txtIdClient.Size = new System.Drawing.Size(171, 20);
+            this.txtIdClient.TabIndex = 4;
             // 
             // label2
             // 
@@ -145,12 +143,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Número de Identificación";
             // 
-            // textBox3
+            // txtNameClient
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtNameClient.Location = new System.Drawing.Point(143, 120);
+            this.txtNameClient.Name = "txtNameClient";
+            this.txtNameClient.Size = new System.Drawing.Size(171, 20);
+            this.txtNameClient.TabIndex = 6;
             // 
             // label3
             // 
@@ -170,21 +168,33 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Nombre Aerolínea";
             // 
-            // comboBox1
+            // cmbAirline
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(474, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cmbAirline.FormattingEnabled = true;
+            this.cmbAirline.Items.AddRange(new object[] {
+            "Avianca",
+            "Satena",
+            "Wingo",
+            "EasyFly",
+            "GCA Airlines"});
+            this.cmbAirline.Location = new System.Drawing.Point(474, 41);
+            this.cmbAirline.Name = "cmbAirline";
+            this.cmbAirline.Size = new System.Drawing.Size(171, 21);
+            this.cmbAirline.TabIndex = 9;
             // 
-            // comboBox2
+            // cmbDestinyCities
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(474, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(171, 21);
-            this.comboBox2.TabIndex = 11;
+            this.cmbDestinyCities.FormattingEnabled = true;
+            this.cmbDestinyCities.Items.AddRange(new object[] {
+            "Bogotá",
+            "Medellín",
+            "Bucaramanga",
+            "Cartagena",
+            "Leticia"});
+            this.cmbDestinyCities.Location = new System.Drawing.Point(474, 79);
+            this.cmbDestinyCities.Name = "cmbDestinyCities";
+            this.cmbDestinyCities.Size = new System.Drawing.Size(171, 21);
+            this.cmbDestinyCities.TabIndex = 11;
             // 
             // label5
             // 
@@ -204,36 +214,20 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Fecha de Viaje";
             // 
-            // dateTimePicker1
+            // dtpDateTravel
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(445, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dtpDateTravel.Location = new System.Drawing.Point(445, 120);
+            this.dtpDateTravel.Name = "dtpDateTravel";
+            this.dtpDateTravel.Size = new System.Drawing.Size(200, 20);
+            this.dtpDateTravel.TabIndex = 13;
             // 
-            // dataGridView1
+            // dvgQueue
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 166);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(630, 168);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(312, 354);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(236, 357);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Fecha Actual";
+            this.dvgQueue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgQueue.Location = new System.Drawing.Point(15, 166);
+            this.dvgQueue.Name = "dvgQueue";
+            this.dvgQueue.Size = new System.Drawing.Size(630, 168);
+            this.dvgQueue.TabIndex = 14;
             // 
             // label8
             // 
@@ -244,12 +238,13 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Total de Registros";
             // 
-            // textBox5
+            // txtTotalRegister
             // 
-            this.textBox5.Location = new System.Drawing.Point(545, 354);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 17;
+            this.txtTotalRegister.Location = new System.Drawing.Point(545, 354);
+            this.txtTotalRegister.Name = "txtTotalRegister";
+            this.txtTotalRegister.ReadOnly = true;
+            this.txtTotalRegister.Size = new System.Drawing.Size(100, 20);
+            this.txtTotalRegister.TabIndex = 17;
             // 
             // btnAdd
             // 
@@ -257,8 +252,9 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 19;
-            this.btnAdd.Text = "Agregar";
+            this.btnAdd.Text = "Registrar";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // button1
             // 
@@ -268,15 +264,17 @@
             this.button1.TabIndex = 20;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnNextProcess
+            // btnReporte
             // 
-            this.btnNextProcess.Location = new System.Drawing.Point(213, 398);
-            this.btnNextProcess.Name = "btnNextProcess";
-            this.btnNextProcess.Size = new System.Drawing.Size(112, 23);
-            this.btnNextProcess.TabIndex = 21;
-            this.btnNextProcess.Text = "Próximo a Procesar";
-            this.btnNextProcess.UseVisualStyleBackColor = true;
+            this.btnReporte.Location = new System.Drawing.Point(213, 398);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(112, 23);
+            this.btnReporte.TabIndex = 21;
+            this.btnReporte.Text = "Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // button2
             // 
@@ -303,25 +301,23 @@
             this.ClientSize = new System.Drawing.Size(678, 443);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnNextProcess);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtTotalRegister);
+            this.Controls.Add(this.dvgQueue);
+            this.Controls.Add(this.dtpDateTravel);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbDestinyCities);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbAirline);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNameClient);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtIdClient);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNumFlight);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -330,7 +326,7 @@
             this.Text = "Formulario cola (Queue)";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgQueue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,25 +342,23 @@
         private System.Windows.Forms.ToolStripMenuItem próximoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regresarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNumFlight;
+        private System.Windows.Forms.TextBox txtIdClient;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNameClient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbAirline;
+        private System.Windows.Forms.ComboBox cmbDestinyCities;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpDateTravel;
+        private System.Windows.Forms.DataGridView dvgQueue;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTotalRegister;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnNextProcess;
+        private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
     }

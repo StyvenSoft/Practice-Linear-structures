@@ -135,6 +135,7 @@
             this.btnQueue.TabIndex = 8;
             this.btnQueue.Text = "Ingresar  Problema 2 (Queue)";
             this.btnQueue.UseVisualStyleBackColor = true;
+            this.btnQueue.Click += new System.EventHandler(this.btnQueue_Click);
             // 
             // btnList
             // 

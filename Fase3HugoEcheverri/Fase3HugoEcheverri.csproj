@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="World\Queue\Ticket.cs" />
     <Compile Include="World\Stack\Invoice.cs" />
     <EmbeddedResource Include="Interface\ScreenAccess.resx">
       <DependentUpon>ScreenAccess.cs</DependentUpon>
