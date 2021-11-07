@@ -382,6 +382,7 @@
             this.btnBack.TabIndex = 28;
             this.btnBack.Text = "Regresar";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnExit
             // 

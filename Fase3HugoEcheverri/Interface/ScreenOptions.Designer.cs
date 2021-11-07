@@ -145,6 +145,7 @@
             this.btnList.TabIndex = 9;
             this.btnList.Text = "Ingresar  Problema 3 (Lists)";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnClose
             // 

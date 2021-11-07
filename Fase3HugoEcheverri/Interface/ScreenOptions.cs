@@ -30,5 +30,12 @@ namespace Fase3HugoEcheverri.Interface
             formQueue.Show();
             this.Hide();
         }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            ScreenFormList formLists = new ScreenFormList();
+            formLists.Show();
+            Hide();
+        }
     }
 }
