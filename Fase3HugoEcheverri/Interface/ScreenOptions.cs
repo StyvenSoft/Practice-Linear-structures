@@ -19,16 +19,16 @@ namespace Fase3HugoEcheverri.Interface
 
         private void btnStack_Click(object sender, EventArgs e)
         {
-            Interface.ScreenFormStack formStack = new ScreenFormStack();
+            ScreenFormStack formStack = new ScreenFormStack();
             formStack.Show();
-            this.Hide();
+            Hide();
         }
 
         private void btnQueue_Click(object sender, EventArgs e)
         {
-            Interface.SreenFormQueue formQueue = new SreenFormQueue();
+            SreenFormQueue formQueue = new SreenFormQueue();
             formQueue.Show();
-            this.Hide();
+            Hide();
         }
 
         private void btnList_Click(object sender, EventArgs e)
@@ -36,6 +36,37 @@ namespace Fase3HugoEcheverri.Interface
             ScreenFormList formLists = new ScreenFormList();
             formLists.Show();
             Hide();
+        }
+
+        private void problema1StackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ScreenFormStack formStack = new ScreenFormStack();
+            formStack.Show();
+            Hide();
+        }
+
+        private void problema2QueueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SreenFormQueue formQueue = new SreenFormQueue();
+            formQueue.Show();
+            Hide();
+        }
+
+        private void problema3ListsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ScreenFormList formLists = new ScreenFormList();
+            formLists.Show();
+            Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            DialogResult Result;
+            Result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Información", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (Result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }

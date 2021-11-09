@@ -166,15 +166,5 @@ namespace Fase3HugoEcheverri.World.Stack
                 datePayment = value;
             }
         }
-
-
-        // Metodo ToString
-        override
-        public String ToString()
-        {
-            return "Factura [numFactura=" + numInvoice + ", numMatricula=" + numEnrollment + ", mesfacturado=" + monthBilled
-                    + ", nombre=" + userName + ", direccion=" + address + ", estrato=" + stratum + ", categoria="
-                    + category + ", mts3Consumidos=" + consumMonth + "]";
-        }
     }
 }

@@ -23,10 +23,10 @@ namespace Fase3HugoEcheverri.Interface
         {
             if (txtConsumMonth.Text != "")
             {
-                // int cubicMeterValue = ;
+                int cubicMeterValue = 1500;
                 double comsumMonth = Convert.ToDouble(txtConsumMonth.Text);
 
-                txtTotalPay.Text = Convert.ToString(comsumMonth * 1500);
+                txtTotalPay.Text = Convert.ToString(comsumMonth * cubicMeterValue);
             }
             else
             {
@@ -45,10 +45,19 @@ namespace Fase3HugoEcheverri.Interface
             txtConsumMonth.Clear();
             cmbCategory.ResetText();
             txtTotalPay.Clear();
-        }
+        } 
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(txtInvoice.Text) ||
+                String.IsNullOrEmpty(txtEnrollment.Text) 
+                )
+            {
+                errorProvider1.SetError(txtInvoice, "Debe ingresar");
+                errorProvider1.SetError(txtEnrollment, "Debe ingresar");
+                return;
+            }
+
             string numInvoice = txtInvoice.Text;
             string numEnrollment = txtEnrollment.Text;
             string monthBilled = txtMonthBilled.Text;
@@ -120,6 +129,36 @@ namespace Fase3HugoEcheverri.Interface
             ScreenOptions optionsScreen = new ScreenOptions();
             optionsScreen.Show();
             Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult Result;
+            Result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Información", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (Result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAdd_Click(sender, e);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnDelete_Click(sender, e);
+        }
+
+        private void prToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnReport_Click(sender, e);
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnExit_Click(sender, e);
         }
     }
 }

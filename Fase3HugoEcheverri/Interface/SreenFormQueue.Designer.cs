@@ -93,26 +93,30 @@
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar";
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.agregarToolStripMenuItem.Text = "Registrar";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // próximoToolStripMenuItem
             // 
             this.próximoToolStripMenuItem.Name = "próximoToolStripMenuItem";
-            this.próximoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.próximoToolStripMenuItem.Text = "Próximo a procesar";
+            this.próximoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.próximoToolStripMenuItem.Text = "Reporte";
+            this.próximoToolStripMenuItem.Click += new System.EventHandler(this.próximoToolStripMenuItem_Click);
             // 
             // regresarToolStripMenuItem
             // 
             this.regresarToolStripMenuItem.Name = "regresarToolStripMenuItem";
-            this.regresarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.regresarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.regresarToolStripMenuItem.Text = "Regresar";
+            this.regresarToolStripMenuItem.Click += new System.EventHandler(this.regresarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -294,6 +298,7 @@
             this.button3.TabIndex = 23;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // SreenFormQueue
             // 

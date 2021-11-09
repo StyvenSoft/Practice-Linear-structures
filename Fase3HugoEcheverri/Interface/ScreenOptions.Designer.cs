@@ -155,6 +155,7 @@
             this.btnClose.TabIndex = 10;
             this.btnClose.Text = "Salir";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // menuStrip1
             // 
@@ -181,18 +182,21 @@
             this.problema1StackToolStripMenuItem.Name = "problema1StackToolStripMenuItem";
             this.problema1StackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.problema1StackToolStripMenuItem.Text = "Problema 1 (Stack)";
+            this.problema1StackToolStripMenuItem.Click += new System.EventHandler(this.problema1StackToolStripMenuItem_Click);
             // 
             // problema2QueueToolStripMenuItem
             // 
             this.problema2QueueToolStripMenuItem.Name = "problema2QueueToolStripMenuItem";
             this.problema2QueueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.problema2QueueToolStripMenuItem.Text = "Problema 2 (Queue)";
+            this.problema2QueueToolStripMenuItem.Click += new System.EventHandler(this.problema2QueueToolStripMenuItem_Click);
             // 
             // problema3ListsToolStripMenuItem
             // 
             this.problema3ListsToolStripMenuItem.Name = "problema3ListsToolStripMenuItem";
             this.problema3ListsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.problema3ListsToolStripMenuItem.Text = "Problema 3 (Lists)";
+            this.problema3ListsToolStripMenuItem.Click += new System.EventHandler(this.problema3ListsToolStripMenuItem_Click);
             // 
             // ScreenOptions
             // 

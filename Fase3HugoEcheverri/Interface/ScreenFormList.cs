@@ -129,5 +129,40 @@ namespace Fase3HugoEcheverri.Interface
             optionsScreen.Show();
             Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult Result;
+            Result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Información", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (Result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAdd_Click(sender, e);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnDelete_Click(sender, e);
+        }
+
+        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnSearch_Click(sender, e);
+        }
+
+        private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button4_Click(sender, e);
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button5_Click(sender, e);
+        }
     }
 }

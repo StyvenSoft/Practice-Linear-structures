@@ -24,7 +24,6 @@ namespace Fase3HugoEcheverri.Interface
             txtNumFlight.Clear();
             txtIdClient.Clear();
             txtNameClient.Clear();
-            txtNameClient.Clear();
             cmbAirline.ResetText();
             cmbDestinyCities.ResetText();
         }
@@ -66,7 +65,7 @@ namespace Fase3HugoEcheverri.Interface
             }
             else
             {
-                MessageBox.Show("No hay registros en la Pila!", "Atención");
+                MessageBox.Show("No hay registros en la Cola!", "Atención");
             }
         }
 
@@ -89,6 +88,36 @@ namespace Fase3HugoEcheverri.Interface
             ScreenOptions optionsScreen = new ScreenOptions();
             optionsScreen.Show();
             Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult Result;
+            Result = MessageBox.Show("¿Está seguro que desea salir del sistema?", "Información", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (Result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAdd_Click(sender, e);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button1_Click(sender, e);
+        }
+
+        private void próximoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnReporte_Click(sender, e);
+        }
+
+        private void regresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button2_Click(sender, e);
         }
     }
 }
